@@ -8,7 +8,7 @@ import EndQuote from '../components/EndQuote'
 import EndNote from '../components/EndNote'
 import Footer from '../components/Footer'
 
-class Landing extends Component {
+class Landing extends Component<{ data: any }> {
   render() {
     const { title, intro, quote, about, endQuote, endNote, social } = this.props.data.landing.edges[0].node
 
