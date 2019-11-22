@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-const MetaHead = ({ title, description }) => (
+const MetaHead = ({ title, description } : { title: string; description: string}) => (
   <Helmet>
     <title>{title}</title>
     <meta name="description" content={description} />
@@ -17,12 +17,7 @@ const MetaHead = ({ title, description }) => (
 
 MetaHead.defaultProps = {
   title: 'Portfolio',
-  description: 'My lifes greates achievements',
-}
-
-MetaHead.propTypes = {
-  description: PropTypes.string,
-  title: PropTypes.string,
+  description: 'My lifes greatets achievements',
 }
 
 export default MetaHead

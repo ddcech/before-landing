@@ -3,9 +3,9 @@ export const breakpoints = {
   tabletWide: 1024,
   desktop: 1200,
   desktopWide: 1800,
-}
+} as any
 
-export const mq = Object.keys(breakpoints).reduce((accumulator, label) => {
+export const mq = Object.keys(breakpoints).reduce((accumulator: any, label) => {
   const emSize = breakpoints[label] / 16
 
   accumulator[label] = `@media (min-width: ${emSize}em)`

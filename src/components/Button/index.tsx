@@ -1,22 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { ReactChildren, ButtonHTMLAttributes } from 'react'
 import { StyledButton } from './styled'
 
-const Button = ({ type, children, isPrimary }) => (
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  isPrimary: boolean;
+  children: ReactChildren
+}
+
+const Button = ({ type, children, isPrimary = false }: IButtonProps) => (
   <StyledButton type={type} isPrimary={isPrimary}>
     {children}
   </StyledButton>
 )
-
-Button.defaultProps = {
-  isPrimary: false,
-  type: 'button',
-}
-
-Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  isPrimary: PropTypes.bool,
-  type: PropTypes.string,
-}
 
 export default Button

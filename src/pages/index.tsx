@@ -1,12 +1,12 @@
 import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
-import Header from 'components/Header'
-import Quote from 'components/Quote'
-import About from 'components/About'
+import Header from '../components/Header'
+import Quote from '../components/Quote'
+import About from '../components/About'
 // import Portfolio from 'components/Portfolio'
-import EndQuote from 'components/EndQuote'
-import EndNote from 'components/EndNote'
-import Footer from 'components/Footer'
+import EndQuote from '../components/EndQuote'
+import EndNote from '../components/EndNote'
+import Footer from '../components/Footer'
 
 class Landing extends Component {
   render() {

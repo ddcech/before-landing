@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactMarkdown from 'react-markdown'
-import Container from 'components/Container'
+import Container from '../Container'
 import { Wrapper, StyledAboutText } from './styled'
 
-const EndNote = ({ text }) => (
+const EndNote = ({ text }: { text: string }) => (
   <Container>
     <Wrapper>
       <StyledAboutText>

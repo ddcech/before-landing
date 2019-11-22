@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 import { createGlobalStyle } from 'styled-components'
 // import theme from 'styles/theme'
-import fontFaces from 'styles/fontFaces'
+import fontFaces from './fontFaces'
 
 export default createGlobalStyle`
   ${fontFaces}
@@ -45,7 +45,7 @@ export default createGlobalStyle`
 
   .reveal,
   .reveal--delay1,
-  .reveal--delay2, {
+  .reveal--delay2 {
     visibility: hidden;
   }
 `
