@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "@strv/javascript/environments/react/v16",
+    "@strv/javascript/environments/react/optional",
+    "@strv/javascript/coding-styles/recommended"
+  ],
+  "rules": {
+    "import/group-exports": 0,
+    "react/prefer-stateless-function": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  }
+}
