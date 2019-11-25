@@ -1,5 +1,6 @@
 {
   "presets": [
+    "@babel/preset-typescript",
     [
       "babel-preset-gatsby",
       {
@@ -10,14 +11,6 @@
     ]
   ],
   "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": ["./src"],
-        "alias": {
-          "static": ["./public"]
-        }
-      }
-    ]
+    "babel-plugin-styled-components"
   ]
 }
