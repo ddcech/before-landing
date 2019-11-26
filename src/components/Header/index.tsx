@@ -1,25 +1,24 @@
 import React from 'react'
-import Social from '../Social'
-import { Wrapper, Name, Intro, SocialWrap } from './styled'
+import { StyledHeader, StyledNavigation, StyledLink } from './styled'
+import { LogoIcon } from '../LogoIcon'
+import Container from '../Container'
 
-interface IHeaderProps {
-  title: string
-  intro: string
-  social: []
-}
+const Navigation = () => (
+  <StyledNavigation>
+    <StyledLink to="/work">work</StyledLink>
+    <StyledLink to="/services">services</StyledLink>
+    <StyledLink to="/about">about</StyledLink>
+    <StyledLink to="/contact">contact</StyledLink>
+  </StyledNavigation>
+)
 
-const Header = ({ title = '', intro = '', social = [] }: IHeaderProps) => (
-  <Wrapper>
-    <Name>{title && title}</Name>
-    <Intro>{intro && intro }</Intro>
-
-    {social.length > 0 &&
-      <SocialWrap>
-        <Social networks={social} />
-      </SocialWrap>
-    }
-
-  </Wrapper>
+const Header = () => (
+  <Container>
+    <StyledHeader>
+      <LogoIcon />
+      <Navigation />
+    </StyledHeader>
+  </Container>
 )
 
 export default Header

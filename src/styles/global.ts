@@ -23,7 +23,9 @@ export default createGlobalStyle`
   }
 
   body {
-    font-family: 'Lora', serif;
+    /* font-family: 'Lora', serif; */
+
+    font-family: Helvetica, Arial, sans-serif;
     color: black;
     margin: 0;
 
