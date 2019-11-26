@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: ddcech/ddcech.github.io
+  repo: ddcech/before.github.io
   branch: "master"
 collections:
   - label: "Pages"

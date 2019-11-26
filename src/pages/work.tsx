@@ -24,19 +24,6 @@ class Work extends Component<{ data: any }> {
   }
 }
 
-// const caseStudies = [
-//   { brandName: 'ease', workType: 'Full-scale branding'},
-//   { brandName: 'EMCO', workType: 'Eshop'},
-//   { brandName: 'IBM', workType: 'Explanation Video'},
-//   { brandName: 'Axe Capital', workType: 'Website'},
-//   { brandName: 'Trime', workType: 'Eshop & Packaging'},
-//   { brandName: 'Scheuermann', workType: 'Branding & Website'},
-//   { brandName: 'Party Gods', workType: 'Mobile Game'},
-//   { brandName: 'Tribes of Mokha', workType: 'Eshop'},
-//   { brandName: 'Metronome Festival', workType: 'Website'},
-//   { brandName: 'ESTEN', workType: 'Branding & Website'},
-// ]
-
 export const query = graphql`
   query WorkQuery {
     work: allPagesJson(filter: {pageName: {eq: "work"}}) {
