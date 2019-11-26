@@ -8,9 +8,22 @@ const StyledFeaturedFour = styled.div`
   flex-wrap: wrap;
 `
 
+
+const CaseStudy = styled.div`
+  margin-right: 1.5rem;
+`
+
 const CaseStudyWrap = styled.div`
   width: 50%;
   margin-bottom: 8rem;
+
+  &:nth-child(even) {
+    ${CaseStudy} {
+      margin-left: 1.5rem;
+      margin-right: 0;
+    }
+  }
+
 `
 
 const CaseStudyImage = styled.img`
@@ -50,12 +63,14 @@ export const FeaturedFour = ({ caseStudies }: IFeaturedFourProps) => (
     <StyledFeaturedFour>
       {caseStudies.map((caseStudy) => (
         <CaseStudyWrap>
-          <CaseStudyImage />
-          <CaseStudyFoot>
-            <BrandName>{caseStudy.brandName}</BrandName>
-            <Splitter>/</Splitter>
-            <WorkType>{caseStudy.workType}</WorkType>
-          </CaseStudyFoot>
+          <CaseStudy>
+            <CaseStudyImage />
+            <CaseStudyFoot>
+              <BrandName>{caseStudy.brandName}</BrandName>
+              <Splitter>&nbsp;/&nbsp;</Splitter>
+              <WorkType>{caseStudy.workType}</WorkType>
+            </CaseStudyFoot>
+          </CaseStudy>
         </CaseStudyWrap>
       ))}
     </StyledFeaturedFour>

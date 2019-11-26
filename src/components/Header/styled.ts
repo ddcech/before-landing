@@ -21,4 +21,8 @@ export const StyledNavigation = styled.header`
 export const StyledLink = styled(Link)`
   margin-left: 8rem;
   padding: 0.5rem 0.25rem;
+
+  &:nth-child(1) {
+    margin-left: 0;
+  }
 `

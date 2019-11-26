@@ -28,6 +28,8 @@ const FooterAction = styled.div`
 
 const FooterFoot = styled.div`
   display: flex;
+  justify-content: space-between;
+  max-width: 80rem;
 `
 
 const FooterLogo = styled.div`
@@ -38,17 +40,21 @@ const FooterNav = styled.div`
   display: flex;
 `
 
+export const StyledLink = styled(Link)`
+  margin-left: 8rem;
+  padding: 0.5rem 0.25rem;
+
+  &:nth-child(1) {
+    margin-left: 0;
+  }
+`
+
 export const StyledNavigation = styled.header`
   display: flex;
   font-size: 2rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
   color: ${theme.colors.black};
-`
-
-export const StyledLink = styled(Link)`
-  margin-left: 8rem;
-  padding: 0.5rem 0.25rem;
 `
 
 
