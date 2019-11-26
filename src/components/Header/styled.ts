@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { Link } from '@reach/router'
 import theme from '../../styles/theme'
+import { Link } from 'gatsby'
 
 export const StyledHeader = styled.header`
   display: flex;

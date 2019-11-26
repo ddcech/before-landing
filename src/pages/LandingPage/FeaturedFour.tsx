@@ -29,11 +29,11 @@ const BrandName = styled.div`
 `
 
 const Splitter = styled.div`
-  color: ${theme.colors.grey};
+  color: ${theme.colors.darkerGrey};
 `
 
 const WorkType = styled.div`
-  color: ${theme.colors.grey};
+  color: ${theme.colors.darkerGrey};
 `
 
 interface ICaseStudy {

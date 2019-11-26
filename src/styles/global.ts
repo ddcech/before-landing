@@ -2,6 +2,7 @@
 import { createGlobalStyle } from 'styled-components'
 // import theme from 'styles/theme'
 import fontFaces from './fontFaces'
+import theme from './theme'
 
 export default createGlobalStyle`
   ${fontFaces}
@@ -26,7 +27,7 @@ export default createGlobalStyle`
     /* font-family: 'Lora', serif; */
 
     font-family: Helvetica, Arial, sans-serif;
-    color: black;
+    color: ${theme.colors.black};
     margin: 0;
 
     @media print {
