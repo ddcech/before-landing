@@ -2,15 +2,14 @@ import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { FeaturedCaseStudy } from './LandingPage/FeaturedCaseStudy'
-import { BriefAboutSection } from './LandingPage/BriefAboutSection'
+import { FeaturedCaseStudy } from '../components/LandingPage/FeaturedCaseStudy'
+import { BriefAboutSection } from '../components/LandingPage/BriefAboutSection'
 import Container from '../components/Container'
 import { SectionWrap } from '../components/SectionWrap'
-import { FeaturedFour } from './LandingPage/FeaturedFour'
+import { FeaturedFour } from '../components/LandingPage/FeaturedFour'
 
 class Landing extends Component<{ data: any }> {
   render() {
-    const { title, intro, quote, about, endQuote, endNote, social } = this.props.data.landing.edges[0].node
     const { caseStudies } = this.props.data.work.edges[0].node
 
     return (

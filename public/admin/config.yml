@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: ddcech/before-landing
+  branch: "master"
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Landing Page"
+        name: "landing"
+        file: "src/pages/landing.json"
+        fields:
+          - {label: PageName, name: pageName, widget: hidden, default: "landing"}
+          - {label: Title, name: title, widget: string}
+          - {label: Intro, name: intro, widget: string}
+          - {label: Quote, name: quote, widget: string}
+          - {label: About, name: about, widget: markdown}
+          - {label: End Quote, name: endQuote, widget: string}
+          - {label: End Note, name: endNote, widget: markdown}
+          - label: "Social Links"
+            name: "social"
+            widget: "list"
+            fields:
+              - label: Network
+                name: network
+                widget: select
+                options:
+                - { label: "Facebook", value: "facebook" }
+                - { label: "Instagram", value: "instagram" }
+                - { label: "LinkedIn", value: "linkedin" }
+              - {label: Link, name: link, widget: string}
+      - label: "Work Page"
+        name: "work"
+        file: "src/pages/work.json"
+        fields:
+          - {label: PageName, name: pageName, widget: hidden, default: "landing"}
+          - {label: Title, name: title, widget: string}
+          - label: "Case Studies"
+            name: "caseStudies"
+            widget: "list"
+            fields:
+              - label: Study
+                name: study
+                widget: list
+                fields:
+                - { label: "Brand Name", value: "brandName" }
+                - { label: "Work Type", value: "workType" }
+media_folder: static/img
+public_folder: /img
