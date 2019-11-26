@@ -1,12 +1,12 @@
 import React, { Fragment, Component } from 'react'
 import { graphql } from 'gatsby'
 import Header from '../components/Header'
-import Quote from '../components/Quote'
-import About from '../components/About'
-// import Portfolio from 'components/Portfolio'
-import EndQuote from '../components/EndQuote'
-import EndNote from '../components/EndNote'
 import Footer from '../components/Footer'
+import { FeaturedCaseStudy } from './LandingPage/FeaturedCaseStudy'
+import { BriefAboutSection } from './LandingPage/BriefAboutSection'
+import Container from '../components/Container'
+import { SectionWrap } from '../components/SectionWrap'
+import { FeaturedFour } from './LandingPage/FeaturedFour'
 
 class Landing extends Component<{ data: any }> {
   render() {
@@ -14,17 +14,26 @@ class Landing extends Component<{ data: any }> {
 
     return (
       <Fragment>
-        <Header title={title} intro={intro} social={social} />
-        <Quote text={quote} />
-        <About text={about} />
-        {/* <Portfolio /> */}
-        <EndQuote text={endQuote} />
-        <EndNote text={endNote} />
+        <Header />
+        <Container>
+          <SectionWrap>
+            <FeaturedCaseStudy image="" name="Scheuermann" actionText="see case study ->" />
+            <BriefAboutSection text="Small design studio helping brands being understood by a viewer on the other side of the screen." />
+            <FeaturedFour caseStudies={caseStudies} />
+          </SectionWrap>
+        </Container>
         <Footer />
       </Fragment>
     )
   }
 }
+
+const caseStudies = [
+  { brandName: 'ease', workType: 'Full-scale branding'},
+  { brandName: 'EMCO', workType: 'Eshop'},
+  { brandName: 'IBM', workType: 'Explanation Video'},
+  { brandName: 'Axe Capital', workType: 'Website'},
+]
 
 export const query = graphql`
   query IndexQuery {

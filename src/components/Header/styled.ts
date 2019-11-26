@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import { Link } from '@reach/router'
+import theme from '../../styles/theme'
 
 export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 10rem;
-  padding: 4rem 10rem;
+  padding: 0 10rem;
 `
 
 export const StyledNavigation = styled.header`
@@ -13,6 +15,7 @@ export const StyledNavigation = styled.header`
   font-size: 2rem;
   letter-spacing: 0.1rem;
   line-height: 3rem;
+  color: ${theme.colors.black};
 `
 
 export const StyledLink = styled(Link)`
